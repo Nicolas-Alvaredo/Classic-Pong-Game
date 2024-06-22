@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#gameCanvas {
+    border: 10px solid white; /* Adjusted border weight */
+    background-color: #000;
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+
+.paddle {
+    width: 20px; /* Paddle width */
+    height: 100px;
+    background-color: white;
+    position: absolute;
+}
+
+#leftPaddle {
+    left: 0;
+}
+
+#rightPaddle {
+    right: 0;
+}
+
+#ball {
+    width: 15px; /* Ball size */
+    height: 15px; /* Ball size */
+    background-color: white;
+    position: absolute;
+}
+
+#scoreBoard {
+    position: absolute;
+    top: 20px; /* Adjusted top position */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px; /* Adjusted width for more spacing */
+}
+
+.score {
+    font-size: 64px; /* Match the font size in the provided image */
+    font-weight: bold; /* Make the font bolder */
+    color: lightgrey; /* Match the color in the provided image */
+}
+
+#net {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Adjusted net width */
+    height: 100%;
+    background: repeating-linear-gradient(
+        white 0 20px, /* Adjusted line height for more spacing */
+        black 20px 40px /* Adjusted line height for more spacing */
+    );
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px; /* Match the font size in the provided image */
+    color: yellow; /* Countdown number color */
+    background-color: black; /* Countdown background color */
+    padding: 10px;
+    display: none; /* Hide by default */
+}
+
+#winnerMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px; /* Match the font size in the provided image */
+    color: white; /* Winner message color */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border: 5px solid white;
+    text-align: center;
+    display: none; /* Hide by default */
+}
+
+.hidden {
+    display: none;
+}
